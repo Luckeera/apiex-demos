@@ -1,0 +1,11 @@
+# Vercel
+.vercel
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temporários
+*.log
+.temp

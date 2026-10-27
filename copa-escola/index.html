@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07150f">
+  <meta name="description" content="Site demonstrativo com informações e chaveamento de um campeonato escolar.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%2307150f%22/><text x=%2250%22 y=%2261%22 text-anchor=%22middle%22 font-size=%2235%22 fill=%22%23c9f05a%22>CI</text></svg>">
+  <title>Copa Integração · Campeonato escolar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../global-nav.css">
+</head>
+<body>
+  <header class="apiex-topbar" aria-label="Navegação do Projeto APIEX">
+    <div class="apiex-topbar-inner">
+      <a href="../" class="apiex-back-link">
+        <span aria-hidden="true">←</span> Hub do Projeto APIEX
+      </a>
+      <div class="apiex-demos-nav">
+        <span class="apiex-label">Demos:</span>
+        <a href="../mural-estudos/" class="apiex-nav-link">Mural de Estudos</a>
+        <a href="../copa-escola/" class="apiex-nav-link active">Copa da Escola</a>
+        <a href="../mapa-mental/" class="apiex-nav-link">Mapa Mental</a>
+      </div>
+    </div>
+  </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Copa Integração — início">
+      <span class="logo-mark" aria-hidden="true">CI</span>
+      <span>COPA <b>INTEGRAÇÃO</b></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#jogos">Jogos</a>
+      <a href="#chaveamento">Chaveamento</a>
+      <a href="#regulamento">Regulamento</a>
+    </nav>
+    <button class="outline-button" id="reset-championship" type="button">Restaurar demo</button>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">ESPORTE · RESPEITO · COMUNIDADE</p>
+        <h1>A nossa escola<br>entra em <span>campo.</span></h1>
+        <p class="hero-description">Acompanhe horários, placares e o caminho das equipes até a grande final da Copa Integração.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#chaveamento">Ver chaveamento <span aria-hidden="true">→</span></a>
+          <a class="link-button" href="#regulamento">Ler regulamento</a>
+        </div>
+        <div class="hero-stats" aria-label="Resumo do campeonato">
+          <div><strong>8</strong><span>equipes</span></div>
+          <div><strong>7</strong><span>jogos</span></div>
+          <div><strong>1</strong><span>campeã</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Ilustração abstrata de uma bola no campo">
+        <div class="field-lines"></div>
+        <div class="ball"><span>◆</span></div>
+        <div class="score-chip"><small>PRÓXIMO JOGO</small><b>QUA · 15H30</b><span>Quadra principal</span></div>
+      </div>
+    </section>
+
+    <section class="announcement" aria-label="Aviso importante">
+      <span class="announcement-icon" aria-hidden="true">i</span>
+      <div><b>Atenção, equipes!</b><span>Cheguem 20 minutos antes do jogo para conferência e aquecimento.</span></div>
+      <span class="live-label"><i></i> SITE DEMO</span>
+    </section>
+
+    <section class="section games-section" id="jogos">
+      <div class="section-title">
+        <div><p class="eyebrow">AGENDA</p><h2>Próximos jogos</h2></div>
+        <p>Todos os horários usam dados fictícios para a demonstração.</p>
+      </div>
+      <div class="schedule-grid" id="schedule-grid"></div>
+    </section>
+
+    <section class="bracket-section" id="chaveamento">
+      <div class="section-title light-title">
+        <div><p class="eyebrow">MATA-MATA</p><h2>Caminho até a taça</h2></div>
+        <p>Digite os placares e salve cada fase. Os vencedores avançam automaticamente.</p>
+      </div>
+
+      <div class="bracket-scroll">
+        <div class="bracket" id="bracket" aria-live="polite"></div>
+      </div>
+
+      <div class="bracket-footer">
+        <p id="bracket-status">Preencha os placares das quartas de final.</p>
+        <button class="save-button" id="save-current-stage" type="button">Salvar quartas de final</button>
+      </div>
+      <div class="champion-banner hidden" id="champion-banner">
+        <span aria-hidden="true">★</span>
+        <div><small>CAMPEÃ DA COPA INTEGRAÇÃO</small><strong id="champion-name">A definir</strong></div>
+        <span aria-hidden="true">★</span>
+      </div>
+    </section>
+
+    <section class="section rules-section" id="regulamento">
+      <div class="section-title">
+        <div><p class="eyebrow">JOGO LIMPO</p><h2>Regulamento resumido</h2></div>
+        <p>Um exemplo de como reunir informações importantes em um só lugar.</p>
+      </div>
+      <div class="rules-grid">
+        <article><span>01</span><div><h3>Partidas</h3><p>Dois tempos de 15 minutos, com intervalo de 5 minutos.</p></div></article>
+        <article><span>02</span><div><h3>Empates</h3><p>No mata-mata, o vencedor é definido em três cobranças de pênalti.</p></div></article>
+        <article><span>03</span><div><h3>Uniformes</h3><p>Cada equipe deve usar coletes ou camisas de cores diferentes.</p></div></article>
+        <article><span>04</span><div><h3>Respeito</h3><p>Fair play com adversários, arbitragem, torcida e organização.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo"><span class="logo-mark">CI</span><span>COPA <b>INTEGRAÇÃO</b></span></div>
+    <p>Protótipo educacional APIEX · dados armazenados apenas neste navegador</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

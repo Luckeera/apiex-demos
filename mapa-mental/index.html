@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1b4b">
+  <meta name="description" content="Mapa mental visual e interativo sobre a Revolução Industrial para apoio aos estudos.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2255%22 fill=%22white%22>🧠</text></svg>">
+  <title>Mapa Mental Interativo · Revolução Industrial</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../global-nav.css">
+</head>
+<body>
+  <header class="apiex-topbar" aria-label="Navegação do Projeto APIEX">
+    <div class="apiex-topbar-inner">
+      <a href="../" class="apiex-back-link">
+        <span aria-hidden="true">←</span> Hub do Projeto APIEX
+      </a>
+      <div class="apiex-demos-nav">
+        <span class="apiex-label">Demos:</span>
+        <a href="../mural-estudos/" class="apiex-nav-link">Mural de Estudos</a>
+        <a href="../copa-escola/" class="apiex-nav-link">Copa da Escola</a>
+        <a href="../mapa-mental/" class="apiex-nav-link active">Mapa Mental</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Header Principal -->
+    <header class="mindmap-header">
+      <div class="header-content">
+        <div class="badge-tag">Demo 3 · Apoio aos Estudos & IA</div>
+        <h1>Mapa Mental: <span>Revolução Industrial</span></h1>
+        <p class="subtitle">Concebido como solução para sintetizar conteúdos densos de História antes de provas escolares, integrando lógica de mapas mentais e ilustrações guiadas por IA.</p>
+      </div>
+      <div class="header-actions">
+        <button class="filter-btn active" data-filter="all">Ver Tudo</button>
+        <button class="filter-btn" data-filter="causas">Causas</button>
+        <button class="filter-btn" data-filter="inovacoes">Invenções</button>
+        <button class="filter-btn" data-filter="sociedade">Sociedade</button>
+        <button class="filter-btn" data-filter="consequencias">Consequências</button>
+      </div>
+    </header>
+
+    <main class="mindmap-container">
+      <!-- Centro do Mapa Mental -->
+      <section class="mindmap-canvas">
+        <div class="central-node" id="central-node">
+          <div class="node-icon">⚙️</div>
+          <h2>Revolução Industrial</h2>
+          <span class="period">Séculos XVIII – XIX · Inglaterra</span>
+          <p class="node-desc">Transição dos métodos artesanais para a produção mecanizada em fábricas.</p>
+        </div>
+
+        <!-- Ramos do Mapa -->
+        <div class="branches-grid">
+          <!-- Ramo 1: Causas -->
+          <article class="branch-card causas" data-category="causas">
+            <div class="branch-header">
+              <span class="branch-badge">01</span>
+              <h3>Causas & Fatores</h3>
+            </div>
+            <p class="branch-summary">Por que a Inglaterra foi a pioneira na industrialização?</p>
+            <ul class="node-list">
+              <li class="node-item" data-title="Pioneirismo Inglês e Capital" data-text="Acúmulo de capitais obtido através do comércio marítimo global, expansão colonial e tratados vantajosos.">
+                <strong>Acúmulo de Capital</strong>
+                <span>Comércio marítimo e colônias</span>
+              </li>
+              <li class="node-item" data-title="Cercamento dos Campos (Enclosures)" data-text="Terras comunais foram transformadas em propriedades privadas de pastoreio, expulsando camponeses para as cidades (êxodo rural).">
+                <strong>Lei de Cercamento</strong>
+                <span>Camponeses migram para as cidades</span>
+              </li>
+              <li class="node-item" data-title="Recursos Minerais Abundantes" data-text="O solo britânico possuía imensas jazidas de carvão mineral (combustível da máquina a vapor) e minério de ferro (para construir máquinas).">
+                <strong>Carvão & Ferro</strong>
+                <span>Energia e matéria-prima abundante</span>
+              </li>
+              <li class="node-item" data-title="Burguesia no Poder" data-text="Desde a Revolução Gloriosa (1688), a burguesia tinha representação no Parlamento, garantindo estabilidade política pró-mercado.">
+                <strong>Estabilidade Política</strong>
+                <span>Parlamento favorável aos negócios</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Ramo 2: Inovações -->
+          <article class="branch-card inovacoes" data-category="inovacoes">
+            <div class="branch-header">
+              <span class="branch-badge">02</span>
+              <h3>Inovações Técnicas</h3>
+            </div>
+            <p class="branch-summary">A tecnologia que acelerou e substituiu o trabalho manual.</p>
+            <ul class="node-list">
+              <li class="node-item" data-title="Máquina a Vapor (1769)" data-text="Aperfeiçoada por James Watt, converteu energia térmica em movimento mecânico, permitindo fábricas longe de rios.">
+                <strong>Máquina a Vapor</strong>
+                <span>Aperfeiçoamento de James Watt</span>
+              </li>
+              <li class="node-item" data-title="Tear Mecânico" data-text="Multiplicou vertiginosamente a produção de tecidos de algodão, tornando a indústria têxtil o motor inicial da revolução.">
+                <strong>Tear Mecânico</strong>
+                <span>Explosão da indústria têxtil</span>
+              </li>
+              <li class="node-item" data-title="Locomotivas & Ferrovias" data-text="As ferrovias a vapor revolucionaram o transporte de cargas e pessoas, reduzindo tempo e custo de integração econômica.">
+                <strong>Ferrovias a Vapor</strong>
+                <span>Integração rápida dos mercados</span>
+              </li>
+              <li class="node-item" data-title="Metalurgia e Siderurgia" data-text="Novas técnicas de purificação do ferro permitiram fabricar trilhos, cascos de navios e maquinários robustos.">
+                <strong>Siderurgia Moderna</strong>
+                <span>Fundição de peças industriais</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Ramo 3: Transformações Sociais -->
+          <article class="branch-card sociedade" data-category="sociedade">
+            <div class="branch-header">
+              <span class="branch-badge">03</span>
+              <h3>Impactos Sociais</h3>
+            </div>
+            <p class="branch-summary">A reorganização do modo de vida e trabalho da população.</p>
+            <ul class="node-list">
+              <li class="node-item" data-title="Surgimento do Proletariado" data-text="Trabalhadores sem posses que vendiam sua força de trabalho em troca de salários miseráveis para subsistência.">
+                <strong>Classe Operária</strong>
+                <span>Venda da força de trabalho</span>
+              </li>
+              <li class="node-item" data-title="Jornadas Exaustivas" data-text="Turnos de 14 a 16 horas diárias, 6 ou 7 dias por semana, em ambientes fabris úmidos, escuros e sem ventilação.">
+                <strong>Jornadas de 14h-16h</strong>
+                <span>Condições desumanas e insalubres</span>
+              </li>
+              <li class="node-item" data-title="Trabalho Infantil e Feminino" data-text="Crianças e mulheres eram contratadas em larga escala por receberem salários ainda menores e caberem entre peças de máquinas.">
+                <strong>Exploração Infantil</strong>
+                <span>Salários ainda mais baixos</span>
+              </li>
+              <li class="node-item" data-title="Urbanização Desordenada" data-text="Crescimento caótico de bairros operários ao redor das fábricas, sem saneamento básico, gerando epidemias frequentes.">
+                <strong>Cidades Caóticas</strong>
+                <span>Falta de esgoto, cólera e tifo</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Ramo 4: Consequências -->
+          <article class="branch-card consequencias" data-category="consequencias">
+            <div class="branch-header">
+              <span class="branch-badge">04</span>
+              <h3>Consequências</h3>
+            </div>
+            <p class="branch-summary">O legado que transformou a economia e a política mundial.</p>
+            <ul class="node-list">
+              <li class="node-item" data-title="Capitalismo Industrial" data-text="Consolidação do lucro, da livre concorrência e da divisão entre donos dos meios de produção (burgueses) e trabalhadores.">
+                <strong>Capitalismo Industrial</strong>
+                <span>Hegemonia do capital e lucro</span>
+              </li>
+              <li class="node-item" data-title="Movimentos Operários" data-text="Desde a quebra de máquinas (Ludismo) até a reivindicação de direitos políticos (Cartismo) e fundação de sindicatos (Trade Unions).">
+                <strong>Ludismo & Cartismo</strong>
+                <span>Resistência e primeiros sindicatos</span>
+              </li>
+              <li class="node-item" data-title="Poluição & Meio Ambiente" data-text="Início da queima massiva de combustíveis fósseis, fuligem nas cidades e contaminação de bacias hidrográficas.">
+                <strong>Impacto Ecológico</strong>
+                <span>Fuligem, esgoto e efeito estufa</span>
+              </li>
+              <li class="node-item" data-title="Divisão Global do Trabalho" data-text="Países industrializados vendem manufaturados caros, enquanto países periféricos fornecem matérias-primas e alimentos.">
+                <strong>Nova Ordem Global</strong>
+                <span>Centros fabris vs. fornecedores</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Painel Lateral Interativo / Inspetor -->
+      <aside class="mindmap-inspector" id="inspector">
+        <div class="inspector-card">
+          <div class="inspector-badge" id="inspector-tag">Clique em um conceito</div>
+          <h3 id="inspector-title">Selecione um tópico do mapa</h3>
+          <p id="inspector-body">Navegue pelos ramos de Causas, Invenções, Sociedade e Consequências para explorar as explicações completas, relações de causa-efeito e dicas de memorização para a prova.</p>
+          <div class="review-box" id="inspector-review">
+            <strong>Dica de Estudo:</strong>
+            <p>Conecte sempre uma <em>causa econômica</em> a um <em>efeito social</em> (exemplo: a Lei de Cercamento gerou a mão de obra barata das fábricas).</p>
+          </div>
+        </div>
+
+        <!-- Seção Pedagógica: Como foi usado o No-Code e a IA -->
+        <div class="method-card">
+          <div class="method-header">
+            <span class="method-icon">💡</span>
+            <h4>Engenharia de Prompt & Metodologia</h4>
+          </div>
+          <p class="method-desc">Como os alunos estruturaram a solicitação à IA para apoiar este mapa mental sem gerar alucinações:</p>
+          
+          <div class="prompt-box">
+            <code>"Ilustração educacional horizontal, estilo recorte de papel, mostrando a Revolução Industrial: máquina a vapor, fábrica têxtil, trem, crescimento urbano e trabalhadores. Paleta azul, laranja e creme, fundo limpo, sem texto, sem logotipos, adequada para mapa mental escolar."</code>
+          </div>
+
+          <div class="method-points">
+            <div class="point-item">
+              <strong>Por que "sem texto"?</strong>
+              <span>Geradores visuais de IA costumam alucinar palavras e letras sem sentido; títulos e legendas devem ser definidos pelos alunos no editor.</span>
+            </div>
+            <div class="point-item">
+              <strong>Ciclo de Aprendizado:</strong>
+              <span>1. Ler a matéria → 2. Mapear relações → 3. Ilustrar com IA → 4. Revisar e validar com fontes.</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Filtro por categoria
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const branchCards = document.querySelectorAll('.branch-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        branchCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Interatividade ao clicar nos nós
+    const nodeItems = document.querySelectorAll('.node-item');
+    const inspectorTitle = document.getElementById('inspector-title');
+    const inspectorBody = document.getElementById('inspector-body');
+    const inspectorTag = document.getElementById('inspector-tag');
+    const inspectorReview = document.getElementById('inspector-review');
+
+    nodeItems.forEach(item => {
+      item.addEventListener('click', () => {
+        nodeItems.forEach(n => n.classList.remove('selected'));
+        item.classList.add('selected');
+
+        const title = item.dataset.title || item.querySelector('strong').innerText;
+        const text = item.dataset.text || '';
+        const parentCard = item.closest('.branch-card');
+        const categoryName = parentCard.querySelector('h3').innerText;
+
+        inspectorTag.innerText = categoryName;
+        inspectorTitle.innerText = title;
+        inspectorBody.innerText = text;
+
+        inspectorReview.innerHTML = `
+          <strong>Ponto de Atenção para Avaliações:</strong>
+          <p>Lembre-se de contextualizar esse tópico dentro do ciclo geral de transformação industrial inglesa do século XVIII.</p>
+        `;
+
+        // Rola até o inspetor em mobile
+        if (window.innerWidth <= 900) {
+          document.getElementById('inspector').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

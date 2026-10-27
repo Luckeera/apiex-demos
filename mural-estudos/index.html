@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a36">
+  <meta name="description" content="Mural escolar demonstrativo para organizar atividades e prazos.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2225%22 fill=%22%237459e8%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 font-size=%2260%22 fill=%22white%22>F</text></svg>">
+  <title>Foco na Semana · Mural de estudos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../global-nav.css">
+</head>
+<body>
+  <header class="apiex-topbar" aria-label="Navegação do Projeto APIEX">
+    <div class="apiex-topbar-inner">
+      <a href="../" class="apiex-back-link">
+        <span aria-hidden="true">←</span> Hub do Projeto APIEX
+      </a>
+      <div class="apiex-demos-nav">
+        <span class="apiex-label">Demos:</span>
+        <a href="../mural-estudos/" class="apiex-nav-link active">Mural de Estudos</a>
+        <a href="../copa-escola/" class="apiex-nav-link">Copa da Escola</a>
+        <a href="../mapa-mental/" class="apiex-nav-link">Mapa Mental</a>
+      </div>
+    </div>
+  </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Foco na Semana — início">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span><b>Foco</b><small>na Semana</small></span>
+      </a>
+
+      <nav class="nav-list">
+        <a class="nav-item active" href="#inicio"><span aria-hidden="true">⌂</span> Visão geral</a>
+        <a class="nav-item" href="#calendario"><span aria-hidden="true">□</span> Calendário</a>
+        <a class="nav-item" href="#atividades"><span aria-hidden="true">✓</span> Atividades</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="eyebrow">Demonstração</span>
+        <p>Os dados ficam somente neste navegador.</p>
+        <button class="text-button" id="reset-demo" type="button">Restaurar exemplo</button>
+      </div>
+    </aside>
+
+    <main id="conteudo">
+      <header class="topbar" id="inicio">
+        <div>
+          <p class="eyebrow" id="today-label">Hoje</p>
+          <h1>Olá! Vamos organizar a semana?</h1>
+        </div>
+        <button class="primary-button" id="open-task-modal" type="button"><span aria-hidden="true">＋</span> Nova atividade</button>
+      </header>
+
+      <section class="stats-grid" aria-label="Resumo das atividades">
+        <article class="stat-card purple">
+          <span class="stat-icon" aria-hidden="true">◎</span>
+          <div><strong id="stat-pending">0</strong><span>Pendentes</span></div>
+        </article>
+        <article class="stat-card coral">
+          <span class="stat-icon" aria-hidden="true">!</span>
+          <div><strong id="stat-urgent">0</strong><span>Urgentes</span></div>
+        </article>
+        <article class="stat-card teal">
+          <span class="stat-icon" aria-hidden="true">✓</span>
+          <div><strong id="stat-done">0</strong><span>Concluídas</span></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel calendar-panel" id="calendario">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Planejamento</p>
+              <h2 id="calendar-title">Calendário</h2>
+            </div>
+            <div class="calendar-actions">
+              <button class="icon-button" id="previous-month" type="button" aria-label="Mês anterior">‹</button>
+              <button class="ghost-button" id="current-month" type="button">Hoje</button>
+              <button class="icon-button" id="next-month" type="button" aria-label="Próximo mês">›</button>
+            </div>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span>
+          </div>
+          <div class="calendar-grid" id="calendar-grid" aria-label="Dias do mês"></div>
+          <p class="calendar-hint" id="calendar-hint">Selecione um dia para filtrar as atividades.</p>
+        </article>
+
+        <aside class="panel progress-panel" aria-label="Progresso da semana">
+          <p class="eyebrow">Seu ritmo</p>
+          <h2>Progresso</h2>
+          <div class="progress-ring" id="progress-ring" role="img" aria-label="0 por cento concluído">
+            <div><strong id="progress-value">0%</strong><span>concluído</span></div>
+          </div>
+          <p id="progress-message">Comece por uma tarefa pequena.</p>
+          <div class="legend">
+            <span><i class="legend-dot done"></i> Concluídas</span>
+            <span><i class="legend-dot pending"></i> Pendentes</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="tasks-section" id="atividades">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Próximos passos</p>
+            <h2>Atividades</h2>
+          </div>
+          <div class="filters" aria-label="Filtros de atividade">
+            <label class="search-field">
+              <span class="sr-only">Buscar atividade</span>
+              <input id="search-input" type="search" placeholder="Buscar atividade...">
+            </label>
+            <select id="subject-filter" aria-label="Filtrar por disciplina">
+              <option value="all">Todas as disciplinas</option>
+            </select>
+            <select id="status-filter" aria-label="Filtrar por status">
+              <option value="all">Todos os status</option>
+              <option value="pending">Pendentes</option>
+              <option value="done">Concluídas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="active-filter hidden" id="active-date-filter">
+          <span id="active-date-text"></span>
+          <button type="button" id="clear-date-filter">Limpar filtro</button>
+        </div>
+
+        <div class="task-list" id="task-list" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="task-modal" aria-labelledby="modal-title">
+    <form id="task-form" method="dialog">
+      <div class="modal-heading">
+        <div>
+          <p class="eyebrow">Organize-se</p>
+          <h2 id="modal-title">Nova atividade</h2>
+        </div>
+        <button class="icon-button" id="close-task-modal" type="button" aria-label="Fechar">×</button>
+      </div>
+
+      <label>Título da atividade
+        <input name="title" required maxlength="70" placeholder="Ex.: Seminário de Geografia">
+      </label>
+      <div class="form-grid">
+        <label>Disciplina
+          <input name="subject" required maxlength="30" placeholder="Ex.: Geografia">
+        </label>
+        <label>Prazo
+          <input name="dueDate" type="date" required>
+        </label>
+      </div>
+      <div class="form-grid">
+        <label>Prioridade
+          <select name="priority">
+            <option value="medium">Média</option>
+            <option value="high">Alta</option>
+            <option value="low">Baixa</option>
+          </select>
+        </label>
+        <label>Status
+          <select name="status">
+            <option value="pending">Pendente</option>
+            <option value="done">Concluída</option>
+          </select>
+        </label>
+      </div>
+      <label>Observação (opcional)
+        <textarea name="notes" rows="3" maxlength="180" placeholder="Materiais, páginas ou lembretes..."></textarea>
+      </label>
+      <div class="modal-actions">
+        <button class="ghost-button" id="cancel-task" type="button">Cancelar</button>
+        <button class="primary-button" type="submit">Salvar atividade</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
