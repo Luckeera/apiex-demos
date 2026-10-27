@@ -1,88 +1,90 @@
-/* Global Navigation Bar for APIEX Demos Hub */
+/* Barra de navegação global unificada - Design Clean e Minimalista */
 .apiex-topbar {
-  background: #0f172a;
-  color: #e2e8f0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .apiex-topbar-inner {
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0.55rem 1.25rem;
+  padding: 0.65rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .apiex-back-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  color: #38bdf8;
+  gap: 0.4rem;
+  color: #0f172a;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
-  transition: color 0.15s ease, transform 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .apiex-back-link:hover {
-  color: #7dd3fc;
-  transform: translateX(-2px);
+  color: #2563eb;
+}
+
+.apiex-back-link svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
 }
 
 .apiex-demos-nav {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .apiex-label {
-  color: #94a3b8;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-right: 0.2rem;
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  font-weight: 500;
 }
 
 .apiex-nav-link {
-  color: #cbd5e1;
+  color: #475569;
   text-decoration: none;
-  padding: 0.25rem 0.7rem;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.825rem;
+  font-weight: 500;
   transition: all 0.15s ease;
 }
 
 .apiex-nav-link:hover {
-  background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .apiex-nav-link.active {
-  background: #2563eb;
+  background: #0f172a;
   color: #ffffff;
-  border-color: #60a5fa;
-  font-weight: 600;
 }
 
 @media (max-width: 640px) {
   .apiex-topbar-inner {
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
   }
   .apiex-label {
     display: none;
+  }
+  .apiex-nav-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.775rem;
   }
 }
